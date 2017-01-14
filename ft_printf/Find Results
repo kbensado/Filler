@@ -1,0 +1,318 @@
+Searching 33 files for "t_e_print"
+
+/Users/kbensado/bail/filler/ft_printf/ft_aff.c:
+   13  #include "includes/ft_printf.h"
+   14  
+   15: void		ft_affchar(t_e_print *env)
+   16  {
+   17  	if (env->flag1 == 1)
+   ..
+   27  }
+   28  
+   29: static void	ft_affunb_next(t_e_print *env, char *str)
+   30  {
+   31  	if (env->ispreci == 1 && !ft_strcmp("0", str) && env->preci == 0)
+   ..
+   47  }
+   48  
+   49: void		ft_affunb(unsigned long long nb, t_e_print *env)
+   50  {
+   51  	char	*str;
+
+/Users/kbensado/bail/filler/ft_printf/ft_aff2.c:
+   13  #include "includes/ft_printf.h"
+   14  
+   15: int			ft_affelem(t_e_print *env)
+   16  {
+   17  	int i;
+   ..
+   36  }
+   37  
+   38: void		ft_afflarg(int larg, int size, t_e_print *env)
+   39  {
+   40  	if (larg > size)
+   ..
+   46  }
+   47  
+   48: void		ft_afflargnb(int larg, int size, t_e_print *env)
+   49  {
+   50  	if (larg > size)
+   ..
+   60  }
+   61  
+   62: static void	ft_affstr_next(t_e_print *env, char *str)
+   63  {
+   64  	if (env->ispreci)
+   ..
+   77  }
+   78  
+   79: void		ft_affstr(t_e_print *env, const char *s)
+   80  {
+   81  	char *str;
+
+/Users/kbensado/bail/filler/ft_printf/ft_aff_file.c:
+   13  #include "includes/ft_printf.h"
+   14  
+   15: static int	ft_is_str_next(t_e_print *env, int i)
+   16  {
+   17  	if (env->ispreci)
+   ..
+   30  }
+   31  
+   32: static int	ft_is_str(t_e_print *env, const char *s, int i)
+   33  {
+   34  	if (env->ispreci && env->preci == 0)
+   ..
+   49  }
+   50  
+   51: static void	ft_is_nb_one_next(t_e_print *env)
+   52  {
+   53  	if (env->modifl == 1 || env->convert == 'U' || env->modifz
+   ..
+   62  }
+   63  
+   64: static void	ft_is_nb_one(t_e_print *env)
+   65  {
+   66  	if (ft_strchr("XxOobp\0", env->convert))
+   ..
+   85  }
+   86  
+   87: int			ft_aff(va_list *ap, t_e_print *env, const char *s)
+   88  {
+   89  	int		i;
+
+/Users/kbensado/bail/filler/ft_printf/ft_aff_nb.c:
+   13  #include "includes/ft_printf.h"
+   14  
+   15: static void	ft_affnb4(long long nb, t_e_print *env, char *str)
+   16  {
+   17  	if (env->ispreci == 1 && !ft_strcmp("0", str) && env->preci == 0)
+   ..
+   35  }
+   36  
+   37: static void	ft_affnb3(long long nb, t_e_print *env, char *str)
+   38  {
+   39  	if (env->charflag == ' ' && (nb < 0 || env->flag2 == 1))
+   ..
+   54  }
+   55  
+   56: static void	ft_affnb2(long long nb, t_e_print *env, char *str)
+   57  {
+   58  	if (env->preci > (int)ft_strlen(str))
+   ..
+   79  }
+   80  
+   81: void		ft_affnb(long long nb, t_e_print *env)
+   82  {
+   83  	char	*str;
+
+/Users/kbensado/bail/filler/ft_printf/ft_aff_p.c:
+   13  #include "includes/ft_printf.h"
+   14  
+   15: static void		ft_affo_next(t_e_print *env)
+   16  {
+   17  	if (env->ispreci == 1 && env->preci > (int)ft_strlen(env->str))
+   ..
+   42  }
+   43  
+   44: void			ft_affo(t_e_print *env)
+   45  {
+   46  	if (!env->flag4 && !ft_strcmp(env->str, "0"))
+   ..
+   71  }
+   72  
+   73: static void		ft_affp_next(t_e_print *env)
+   74  {
+   75  	if (env->ispreci == 1 && env->preci > (int)ft_strlen(env->str))
+   ..
+   95  }
+   96  
+   97: void			ft_affp(t_e_print *env)
+   98  {
+   99  	env->largeur -= 2;
+
+/Users/kbensado/bail/filler/ft_printf/ft_affconv.c:
+   13  #include "includes/ft_printf.h"
+   14  
+   15: static void	ft_affx_nextb(t_e_print *env)
+   16  {
+   17  	if (env->ispreci == 1 && env->preci > (int)ft_strlen(env->str))
+   ..
+   37  }
+   38  
+   39: static void	ft_affx_next(t_e_print *env)
+   40  {
+   41  	if (env->preci > (int)ft_strlen(env->str))
+   ..
+   60  }
+   61  
+   62: void		ft_affx(t_e_print *env)
+   63  {
+   64  	if (!ft_strcmp("0", env->str))
+   ..
+   75  }
+   76  
+   77: void		ft_affconv(t_e_print *env)
+   78  {
+   79  	if (env->convert == 'X')
+
+/Users/kbensado/bail/filler/ft_printf/ft_affconv2.c:
+   13  #include "includes/ft_printf.h"
+   14  
+   15: static void	ft_affo_next(t_e_print *env)
+   16  {
+   17  	if (env->ispreci == 1 && env->preci > (int)ft_strlen(env->str))
+   ..
+   42  }
+   43  
+   44: void		ft_affo(t_e_print *env)
+   45  {
+   46  	if (!env->flag4 && !ft_strcmp(env->str, "0"))
+   ..
+   71  }
+   72  
+   73: static void	ft_affp_next(t_e_print *env)
+   74  {
+   75  	if (env->ispreci == 1 && env->preci > (int)ft_strlen(env->str))
+   ..
+   95  }
+   96  
+   97: void		ft_affp(t_e_print *env)
+   98  {
+   99  	env->largeur -= 2;
+
+/Users/kbensado/bail/filler/ft_printf/ft_convert.c:
+   26  }
+   27  
+   28: void	ft_convertbase(t_e_print *env, unsigned long long base)
+   29  {
+   30  	int i;
+   ..
+   49  }
+   50  
+   51: void	ft_convert(t_e_print *env)
+   52  {
+   53  	unsigned long long base;
+
+/Users/kbensado/bail/filler/ft_printf/ft_getflag.c:
+   13  #include "includes/ft_printf.h"
+   14  
+   15: static char		*ft_getflag_next(char *s, va_list *ap, t_e_print *env)
+   16  {
+   17  	if (ft_isdigit(*s))
+   ..
+   35  }
+   36  
+   37: char			*ft_getflag(char *s, va_list *ap, t_e_print *env)
+   38  {
+   39  	while (*++s == '-' || *s == ' ' || *s == '+' || *s == '#' || *s == '0')
+
+/Users/kbensado/bail/filler/ft_printf/ft_getpars.c:
+   13  #include "includes/ft_printf.h"
+   14  
+   15: static char	*ft_getsconv_nextb(char *s, va_list *ap, t_e_print *env, int i)
+   16  {
+   17  	if (*s == 'c' && i == 0)
+   ..
+   32  }
+   33  
+   34: static char	*ft_getsconv_next(char *s, va_list *ap, t_e_print *env, int i)
+   35  {
+   36  	if ((*s == 'C' || (*s == 'c' && env->modifl == 1)) && i == 0)
+   ..
+   49  }
+   50  
+   51: static char	*ft_getsconv(char *s, va_list *ap, t_e_print *env, int i)
+   52  {
+   53  	void *p;
+   ..
+   68  }
+   69  
+   70: static char	*ft_getmodif(char *s, va_list *ap, t_e_print *env)
+   71  {
+   72  	while (*s == 'h' || *s == 'l' || *s == 'j' || *s == 'z')
+   ..
+   97  }
+   98  
+   99: char		*ft_getpreci(char *s, va_list *ap, t_e_print *env)
+  100  {
+  101  	if (*s != '.')
+
+/Users/kbensado/bail/filler/ft_printf/ft_printf.c:
+   13  #include "includes/ft_printf.h"
+   14  
+   15: t_e_print		ft_init(t_e_print *env)
+   16  {
+   17  	env->flag1 = 0;
+   ..
+   39  }
+   40  
+   41: static int	ft_printf_next(char const *s, va_list *ap, t_e_print *env)
+   42  {
+   43  	while (*s)
+   ..
+   63  {
+   64  	va_list ap;
+   65: 	t_e_print	env;
+   66  
+   67  	if (!s || !*s)
+
+/Users/kbensado/bail/filler/ft_printf/ft_putwchar.c:
+   13  #include "includes/ft_printf.h"
+   14  
+   15: void	ft_applywstrpreci(t_e_print *env)
+   16  {
+   17  	int i;
+   ..
+   28  }
+   29  
+   30: void	ft_afflargwstr(t_e_print *env)
+   31  {
+   32  	int i;
+   ..
+   46  }
+   47  
+   48: int		ft_wcharlen(wchar_t wchar, t_e_print *env, int i)
+   49  {
+   50  	int nb;
+   ..
+   72  }
+   73  
+   74: int		ft_putwchar(wchar_t wchar, t_e_print *env, char a, char b)
+   75  {
+   76  	int				nb;
+
+/Users/kbensado/bail/filler/ft_printf/includes/ft_printf.h:
+   46  	wchar_t				*wstr;
+   47  	char				*base;
+   48: }						t_e_print;
+   49  
+   50: void					ft_affchar(t_e_print *env);
+   51: void					ft_affunb(unsigned long long nb, t_e_print *env);
+   52: char					*ft_getflag(char *s, va_list *ap, t_e_print *env);
+   53: char					*ft_getpreci(char *s, va_list *ap, t_e_print *env);
+   54: void					ft_affnb(long long nb, t_e_print *env);
+   55: void					ft_affstr(t_e_print *env, const char *s);
+   56: int						ft_affelem(t_e_print *env);
+   57: void					ft_afflargnb(int larg, int size, t_e_print *env);
+   58: void					ft_afflarg(int larg, int size, t_e_print *env);
+   59  int						ft_putwchar_next(char a, wchar_t
+   60  	wchar, char *str, int nb);
+   61: void					ft_affo(t_e_print *env);
+   62: void					ft_affp(t_e_print *env);
+   63: void					ft_affx(t_e_print *env);
+   64: void					ft_convert(t_e_print *env);
+   65: void					ft_affconv(t_e_print *env);
+   66  int						ft_max(int a, int b, int c);
+   67: void					final_len(t_e_print *list, int len, int preci, int largeur);
+   68  int						ft_printf(char const *s, ...);
+   69: char					*ft_getflag(char *s, va_list *ap, t_e_print *env);
+   70: int						ft_aff(va_list *ap, t_e_print *env, char const *s);
+   71: int						ft_putwchar(wchar_t wchar, t_e_print *env, char a, char b);
+   72: int						ft_wcharlen(wchar_t wchar, t_e_print *env, int i);
+   73: void					ft_applywstrpreci(t_e_print *env);
+   74: void					ft_afflargwstr(t_e_print *env);
+   75  
+   76  #endif
+
+68 matches across 13 files
